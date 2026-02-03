@@ -1,0 +1,49 @@
+header{
+    background: url('../img/bacimg.jpeg') center/cover;
+    height: 100vh;
+}
+.menubar{
+    background: url('../img/fru.jpg') center/cover;
+}
+.menuin{
+    background: rgba(0, 0, 0, 0.505);
+    height: 100vh;
+}
+.trans{
+    transition: 1s ease-in-out;
+}
+/*Swiper style*/
+  swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /*swiper style end*/
+    .swback1{
+        background: url('../img/hero-img-1.png') center/cover;
+         background-color: orange;
+         border-radius: 20px;
+    }
+    .swback2{
+        background: url('../img/hero-img-2.jpg') center/cover;
+        border-radius: 20px;
+    }
+    .cardbg{
+        background: url('../img/pinorange.png') center/cover;
+        
+    }

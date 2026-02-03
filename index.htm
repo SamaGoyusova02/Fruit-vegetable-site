@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/font.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="fixed right-0 bottom-0 z-150"><img class="mb-2 h-[55px] w-[55px]" src="img/smarrow.png" alt="smarrow"></div>
+    <header>
+        <!--Mobil header-->
+       <div class="fixed w-full z-100 shadow-md">
+         <div class="flex md:hidden lg:hidden justify-between items-center h-[100px]  px-3 bg-white">
+            <h2 class="text-[#81c408] font-bold text-3xl" >Fruitables</h2>
+            <span class="border border-[#e5e5e5] rounded-[8px] px-3 py-1.5"><i onclick="omenu()" class="fa-solid fa-bars text-xl text-[#81c408]  "></i></span>
+        </div>
+        
+         <div id="menu" class=" h-[100vh] w-[170px] z-100 fixed top-0 left-[-100%] text-white menubar trans">
+           <div class="menuin">
+             <i onclick="cmenu()" class="fa-solid fa-xmark text-white float-right text-xl pt-2 pr-2 "></i>
+            <ul class="text-center font-[Raleway]  pt-10 font-bold text-[1.1em] ">
+                <li><a href="index.htm">Home</a></li>
+                <li>Shop</li>
+                <li>Shop Detail</li>
+                <li>Pages</li>
+                <li>Contact</li>
+            </ul>
+           </div>
+        </div>
+       </div>
+        <!--Desktoppp header-->
+           <div class="fixed w-full z-100 shadow-xl">
+             <div class="bg-white">
+                <div class="bg-[#81c408] hidden md:flex lg:flex justify-between items-center text-white py-3 mx-[100px] px-7 rounded-tl-[30px] rounded-tr-[10px] rounded-bl-[10px] rounded-br-[30px] ">
+                    <div class="flex gap-2.5 text-sm ml-3">
+                        <i class="fa-solid fa-location-dot text-[#ffb524]"></i>
+                        <p class="font-[Raleway]"> 123 Street, New York</p>
+                        <i class="fa-solid fa-envelope text-[#ffb524]"></i>
+                        <p class="font-[Raleway]">Email@Example.com</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-[Raleway]">Privacy Policy / Terms of Use / Sales and Refunds</p>
+                    </div>
+                </div>
+            </div>
+            <div  class="hidden md:flex lg:flex justify-around items-center px-5 bg-white h-[100px]">
+                <h2 class="text-[#81c408] font-bold text-4xl">Fruitables</h2>
+                <ul class="flex gap-5 font-[Raleway] ">
+                    <li class="text-[#81c408]">Home</li>
+                    <li class="text-[#45595b] hover:text-[#81c408]">Shop</li>
+                    <li class="text-[#45595b] hover:text-[#81c408]"  onclick="dropdown()">
+                        Shop Detail  <span class="text-[.8em] ">▼</span>
+                        <div id="drop" class="bg-[#f4f6f8]  rounded-xl fixed top-[16%] z-50  hidden">
+                            <ul class="px-10 py-3 text-left font-[Raleway] ">
+                                <li class="pb-1 hover:border-b-2">Cart</li>
+                                <li class="pb-1 hover:border-b-2">Chekout</li>
+                                <li class="pb-1 hover:border-b-2">Testimonial</li>
+                                <li class="hover:border-b-2">404 Page</li>
+                            </ul>
+                        </div>
+                     </li>
+                    <li class="text-[#45595b] hover:text-[#81c408]">Pages</li>
+                    <li class="text-[#45595b] hover:text-[#81c408]">Contact</li>
+                </ul>
+               
+                <div class="text-[#81c408] flex justify-center items-center gap-4 " >
+                   <span class="border border-[#ffb524]  h-[45px] w-[45px] flex justify-center items-center rounded-[50%] hover:bg-[#ffb524] "><i class="fa-solid fa-magnifying-glass text-xl"></i></span>
+                   <i class="fa-solid fa-cart-shopping text-3xl hover:text-[#679d06]"></i>
+                   <i class="fa-solid fa-user text-3xl hover:text-[#679d06]"></i>
+                </div>
+            </div>
+           </div>
+
+            <div class="sv grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center pt-[80px] lg:pt-[150px]">
+                <div class="ml-6 lg:pl-14">
+                    <p class="text-[#ffb524] font-[Raleway] text-2xl font-bold mt-20 lg:text-3xl">100% Organic Foods</p>
+                    <p class="text-4xl text-[#81c408] font-bold font-[Raleway] mt-5 mb-10 lg:text-7xl">Organic Veggies & <br/> Fruits Foods</p>
+                    <div class="relative mb-15">
+                        <input class="border-2 border-[#ffb524] bg-white h-[55px] rounded-[25px] px-3 md:w-[300px] lg:w-[350px]" type="search" placeholder="Search"/>
+                        <button class="bg-[#81c408] text-white font-[Raleway] h-[55px] px-4 rounded-[25px] absolute left-[40%] border border-[#ffb524] border-2 " type="submit"> Submit Now</button>
+                    </div>
+                </div>
+                <!--Swiper-->
+                <div class="h-[230px]  md:h-[300px] lg:w-[550px] lg:h-[340px] mx-5 lg:mx-15 lg:mt-[100px]">
+                     <swiper-container class="mySwiper rounded-[15px]" navigation="true" pagination="true" keyboard="true" mousewheel="true"
+                        css-mode="true"   autoplay="true">
+                        <swiper-slide class="swback1 bg-[#81c408]"><span class="bg-[#ffb524] w-[190px] py-2 rounded-[10px] opacity-[.8]"><p class="text-white text-3xl font-bold font-[Raleway]">Fruits</p></span></swiper-slide>
+                        <swiper-slide class="swback2"><span class="bg-[#ffb524] w-[190px] py-2 rounded-[10px] opacity-[.8]"><p class="text-white text-3xl font-bold font-[Raleway]">Vegetables</p></span></swiper-slide>
+                        <swiper-slide class="swback1"><span class="bg-[#ffb524] w-[190px] py-2 rounded-[10px] opacity-[.8]"><p class="text-white text-3xl font-bold font-[Raleway]">Fruits</p></span></swiper-slide>
+                        <swiper-slide class="swback2"><span class="bg-[#ffb524] w-[190px] py-2 rounded-[10px] opacity-[.8]"><p class="text-white text-3xl font-bold font-[Raleway]">Vegetables</p></span></swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+        
+    </header>
+    <!--Main start-->
+        <div id="container" class=" mt-[100px] md:mt-3 lg:mt-8  flex  justify-center items-center flex-wrap">
+          
+        </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
+    <script src="js/app.js"></script> 
+</body>
+</html>
