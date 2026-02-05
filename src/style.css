@@ -47,3 +47,13 @@ header{
         background: url('../img/pinorange.png') center/cover;
         
     }
+    .vegecontainer{
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+.con{
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
